@@ -1,0 +1,9 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-09-12
+  Features:
+    - Added a one-use Starter infinity chest for each newly created player in freeplay.
+    - Reused the vanilla infinity chest interface for choosing starting items and quantities.
+    - Allowed the chest to be mined and moved until it is opened for the first time.
+    - Made the chest non-minable after opening and permanently destroyed it when its interface is closed.
+    - Added English and Simplified Chinese localization.

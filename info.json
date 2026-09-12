@@ -1,0 +1,13 @@
+{
+  "name": "starter-infinity-chest",
+  "version": "0.1.0",
+  "title": "Starter Infinity Chest",
+  "author": "prprnya",
+  "contact": "nya@prpr.cat",
+  "homepage": "https://github.com/prprnya/factorio-starter-infinity-chest",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.1.0"
+  ],
+  "description": "Starts each new freeplay player with a one-use infinity chest. Place and open it to take the starting items you want; closing its interface destroys it permanently."
+}
