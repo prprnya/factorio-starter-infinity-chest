@@ -4,16 +4,19 @@ local function is_starter_chest(entity)
   return entity and entity.valid and entity.name == prototype_name
 end
 
-script.on_event(defines.events.on_player_created, function(event)
-  if not remote.interfaces["freeplay"] then
+local function register_freeplay_starting_item()
+  local freeplay = remote.interfaces["freeplay"]
+  if not freeplay or not freeplay.get_created_items or not freeplay.set_created_items then
     return
   end
 
-  local player = game.get_player(event.player_index)
-  if player then
-    player.insert({name = prototype_name, count = 1})
-  end
-end)
+  local created_items = remote.call("freeplay", "get_created_items")
+  created_items[prototype_name] = 1
+  remote.call("freeplay", "set_created_items", created_items)
+end
+
+script.on_init(register_freeplay_starting_item)
+script.on_configuration_changed(register_freeplay_starting_item)
 
 script.on_event(defines.events.on_gui_opened, function(event)
   if is_starter_chest(event.entity) then

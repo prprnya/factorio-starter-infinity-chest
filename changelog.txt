@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-09-12
+  Bugfixes:
+    - Fixed the Starter infinity chest not being granted when starting a standard freeplay game with the crash-site cutscene enabled.
+  Changes:
+    - Registered the chest through the vanilla freeplay starting-items interface so the freeplay scenario grants it at the correct point in its startup sequence.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2026-09-12
   Features:
